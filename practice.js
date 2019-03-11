@@ -17,7 +17,11 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
+
 //Code Here
+const first = (arr) => {
+  return arr[0];
+}
 
 
 
@@ -33,7 +37,9 @@ var arr = [40,50,60];
 */
 
 //Code Here
-
+const last = (arr) => {
+  return arr[arr.length - 1]
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -48,7 +54,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
+const looper = (family) => {
+  for (let i = 0; i < family.length; i++) {
+    alert(family[i])
+  }
+};
 
 
 ////////// PROBLEM 4 //////////
@@ -63,7 +73,10 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+const reversedLooper = (letters) => {
+  for (let i = letters.length - 1; i >= 0; i--)
+  alert(letters[i]);
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -78,7 +91,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-
+const evenFinder = (nums) => {
+  let newArray = []
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+        newArray.push(nums[i])
+    }
+  }
+  return newArray;
+}
 
 
 
@@ -106,7 +127,17 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
+const divider = (numbersArray) => {
+  let newArray = [evens = [], odds = []]
+    for (let i = 0; i < numbersArray.length; i++) {
+      if (numbersArray[i] % 2 === 0) {
+        newArray[0].push(numbersArray[i])
+      } else {
+        newArray[1].push(numbersArray[i])
+      }
+    }
+    return newArray
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -128,6 +159,16 @@ var getRandomArbitrary = function() {
 
 //Code Here
 
+const finder = (array) => {
+  let randomNum = getRandomArbitrary();
+  let result = false
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === randomNum) {
+      result = true;
+    }
+  }
+  return result;
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -157,6 +198,19 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
+const removeItem = (myGroceryList, item) => {
+  for (let i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] === item) {
+      myGroceryList.splice (i, 1)
+    }
+  }
+  return myGroceryList
+}
+
+
+const addItem = (myGroceryList, item) => {
+  000000000000000000000000000000000000000000000000[-\ 7=45]
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -170,6 +224,7 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 
 ////////// PROBLEM 10 //////////
+
 
 // Do not edit the code below.
 var numbers = [5, '9', 16, 19, '25', '34', 48];
@@ -186,6 +241,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
 
 ////////// PROBLEM 11 //////////
+
 
 // Do not edit the code below.
 var num1 = Math.floor(Math.random() * 30);
