@@ -199,17 +199,29 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Code Here
 
 const removeItem = (myGroceryList, item) => {
-  for (let i = 0; i < myGroceryList.length; i++) {
+  if (myGroceryList && item) {
+    for (let i = 0; i < myGroceryList.length; i++) {
     if (myGroceryList[i] === item) {
       myGroceryList.splice (i, 1)
     }
   }
+} else {
+  const emptyArray = []
+  return emptyArray;
+}
+
   return myGroceryList
 }
 
 
 const addItem = (myGroceryList, item) => {
-  000000000000000000000000000000000000000000000000[-\ 7=45]
+  if (myGroceryList && item) {
+    myGroceryList.push(item);
+  return myGroceryList;
+} else {
+  const emptyArray = []
+  return emptyArray;
+}
 }
 
 
@@ -220,7 +232,13 @@ const addItem = (myGroceryList, item) => {
 */
 
 //Code Here
-
+const maker = () => {
+  const nums = []
+  for (let i = 0; i < 215; i++) {
+    nums.push(i + 1)
+  }
+  return nums
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -237,6 +255,16 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+const addTen = (numbers) => {
+  for (let i = 0; i < numbers.length; i++) {
+    if (typeof numbers[i] === 'string') {
+    numbers[i] = Number(numbers[i]) + 10;
+  } else {
+    numbers[i] = numbers[i] + 10;
+    }
+  } 
+  return numbers;
+}
 
 
 
@@ -264,7 +292,13 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+const longer = (arr1, arr2) => {
+  let longest = arr2;
+  if (arr1.length > arr2.length) {
+    longest = arr1;
+  }
+  return longest;
+}
 
 /*
   As a continuation of the previous problem, write another function called 'both'.
