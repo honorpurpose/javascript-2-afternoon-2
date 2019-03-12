@@ -309,7 +309,17 @@ const longer = (arr1, arr2) => {
 */
 
 //Code Here
-
+const both = (arr1, arr2) => {
+  let newArray = []
+  for (let i = 0; i < arr1.length; i++) {
+    for (let n = 0; n < arr2.length; n++) {
+        if (arr1[i] === arr2[n]) {
+          newArray.push(arr1[i])
+        }
+    }
+  }
+  return newArray
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -349,8 +359,12 @@ var colt = {
 */
 
 //Code Here
+devMountainEmployees.push(tyler);
+devMountainEmployees.push(cahlan);
+devMountainEmployees.push(ryan);
+devMountainEmployees.push(colt);
 
-
+console.log (devMountainEmployees.length)
 
 /*
   Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
@@ -358,6 +372,14 @@ var colt = {
 */
 
 //Code Here
+
+for (let i = 0; i < devMountainEmployees.length; i++) {
+    if (devMountainEmployees[i].name === 'Cahlan') {
+        devMountainEmployees.splice (i, 1)
+    }
+}
+
+
 
 
 
@@ -370,7 +392,7 @@ var colt = {
 */
 
 //Code Here
-
+let users = []
 
 
 /*
@@ -386,10 +408,31 @@ var user1 = {
     password: 'iLoveJavaScript',
     username: 'infiniteLoop'
 };
+var user2 = {
+  name: 'Bob McGinnis',
+  email: 'bobmcginnis33@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniteLoop'
+};
+var user3 = {
+  name: 'Jeff McGinnis',
+  email: 'jeffmcginnis33@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniteLoop'
+};
+var user4 = {
+  name: 'Glen McGinnis',
+  email: 'glenmcginnis33@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniteLoop'
+};
 // Do not edit the code above.
 
 //Code Here
-
+users.push(user1);
+users.push(user2);
+users.push(user3);
+users.push(user4);
 
 
 /*
@@ -403,6 +446,12 @@ var user1 = {
 */
 
 //Code Here
+
+for (let i = 0; i < users.length; i++) {
+  if (users[i].email === 'tylermcginnis33@gmail.com') {
+    users.splice(i, 1)
+  }
+}
 
 
 
